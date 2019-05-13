@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionTestSuite {
-    public List<Integer> actualList = new ArrayList<>();
-    public List<Integer> checkList = new ArrayList<>();
-    public List<Integer> expectedList = new ArrayList<>();
+    List<Integer> actualList = new ArrayList<>();
+    List<Integer> checkList = new ArrayList<>();
+    List<Integer> expectedList = new ArrayList<>();
 
     @Before
     public void before(){
