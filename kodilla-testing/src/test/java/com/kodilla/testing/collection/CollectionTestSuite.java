@@ -1,5 +1,5 @@
 package com.kodilla.testing.collection;
-import com.kodilla.testing.collection.OddNumbersExterminator;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -45,7 +45,10 @@ public class CollectionTestSuite {
         actualList.add(124);
         actualList.add(90);
         expectedList.add(10);
+        expectedList.add(36);
+        expectedList.add(16);
         expectedList.add(124);
+        expectedList.add(90);
         //When
         checkList = exterminatorNormalList.exterminate(actualList);
         System.out.println("List: " + checkList);

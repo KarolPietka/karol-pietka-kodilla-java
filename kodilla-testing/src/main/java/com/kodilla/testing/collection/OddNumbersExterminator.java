@@ -7,7 +7,7 @@ public class OddNumbersExterminator {
 
     public List <Integer> exterminate (List<Integer> numbers){
 
-        List<Integer> evensNumbersList = new ArrayList<Integer>();
+        List<Integer> evensNumbersList = new ArrayList<>();
         for (Integer numberList : numbers) {
             if (numberList % 2 == 0) {
                 evensNumbersList.add(numberList);
