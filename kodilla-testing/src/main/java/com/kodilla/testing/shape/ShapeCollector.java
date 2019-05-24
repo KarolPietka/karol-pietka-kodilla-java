@@ -2,6 +2,7 @@ package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ShapeCollector {
     public List<Shape> figureCollections = new ArrayList<>();
@@ -15,9 +16,11 @@ public class ShapeCollector {
     public int getFigure(int n){
        return figureCollections.size();
     }
-    public String showFigures(int n){
-        String showF = "Figure: " + figureCollections.get(n).getShapeName() + "- field: " + figureCollections.get(n).getField();
-        return showF;
+    public String showFigures(){
+       return figureCollections.stream()
+               .map(shape -> "Figure: " + shape.getShapeName()+ " - field: " + shape.getField())
+               .collect(Collectors.joining("\n"));
+
         }
     public int getFiguresQuantity(){
         return  figureCollections.size();

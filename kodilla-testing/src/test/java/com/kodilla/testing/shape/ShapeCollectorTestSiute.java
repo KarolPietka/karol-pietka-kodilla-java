@@ -2,6 +2,8 @@ package com.kodilla.testing.shape;
 
 import org.junit.*;
 
+import java.sql.SQLOutput;
+
 public class ShapeCollectorTestSiute {
     private static int testCounter = 0;
 
@@ -26,7 +28,7 @@ public class ShapeCollectorTestSiute {
     public void testAddFigure() {
         //Given
         ShapeCollector figureCollections = new ShapeCollector();
-        Circle figure = new Circle("circle");
+        Circle figure = new Circle(5);
 
         //When
         figureCollections.addFigure(figure);
@@ -39,7 +41,7 @@ public class ShapeCollectorTestSiute {
     public void testRemoveFigure() {
         //Given
         ShapeCollector figureCollections = new ShapeCollector();
-        Circle figure = new Circle("circle");
+        Circle figure = new Circle(5);
         figureCollections.addFigure(figure);
 
         //When
@@ -53,29 +55,30 @@ public class ShapeCollectorTestSiute {
     public void testGetFigure() {
         //Given
         ShapeCollector figureCollections = new ShapeCollector();
-        Circle figure = new Circle("circle");
-        figureCollections.addFigure(figure);
+
+        figureCollections.addFigure(new Circle(5.0));
+        figureCollections.addFigure(new Triangle(3,4));
+        figureCollections.addFigure(new Square(5));
 
         //When
-       int figures = figureCollections.getFigure(0);
+        String actual = figureCollections.showFigures();
 
         //Than
-        Assert.assertEquals(1, figures);
+        Assert.assertEquals("Figure: Circle - field: 78.53981633974483\n" +
+        "Figure: Triangle - field: 6.0\n" + "Figure: Square - field: 25.0", actual);
     }
 
-   /* @Test //4
+    @Test //4
     public void testShowFigure() {
         //Given
         ShapeCollector figureCollections = new ShapeCollector();
-        Circle figure = new Circle("Circle");
+        Circle figure = new Circle(5);
         figureCollections.addFigure(figure);
-        String expexted = "Figure: figure - field: 4,5";
-
 
         //When
-         String show = figureCollections.showFigures();
+        String show = figureCollections.showFigures();
 
         //Than
-        Assert.assertEquals(expexted, show);
-    }*/
+        Assert.assertEquals("Figure: Circle - field: 78.53981633974483", show);
+    }
 }
