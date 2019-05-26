@@ -2,12 +2,18 @@ package com.kodilla.stream;
 
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
 public class StreamMain {
     public static void main(String[] args) {
 
+        //7,2
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
+        /*
+        //7.1
         PoemBeautifier beautifier1 = new PoemBeautifier();
         String Text1 = beautifier1.beautify("Rób to, co uważasz za stosowne. I tak zawsze znajdzie się ktoś, kto uważa inaczej…", (text) -> "!!! " + text + " !!!");
         String Text2 = beautifier1.beautify("Nigdy nie jest za późno, by stać się tym, kim chcemy być.", (text) -> text.toUpperCase());
@@ -15,9 +21,10 @@ public class StreamMain {
         String Text4 = beautifier1.beautify("Fajnie jest, dobrze jest, nie rycz.", (text) -> text.substring(13));
 
         System.out.println(Text1 + "\n" + Text2 + "\n" + Text3 + "\n" + Text4);
+    }*/
     }
 }
-        /*
+        /*//
         ExpressionExecutor expressionExecutor = new ExpressionExecutor();
 
         System.out.println("Calculating expressions with lambdas");
