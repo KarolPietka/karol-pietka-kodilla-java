@@ -1,17 +1,36 @@
 package com.kodilla.stream;
 
-
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.forumUser.Forum;
+import com.kodilla.stream.forumUser.ForumUser;
 import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
+import java.time.LocalDate;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class StreamMain {
     public static void main(String[] args) {
+        //7.3
+        Forum forum = new Forum();
+        Map<Integer, ForumUser> result = forum.getList().stream()
+                .filter(user -> user.getSex() == 'M')
+                .filter(user -> user.getDateOfBirth().isBefore(LocalDate.of(1999, 4, 23)))
+                .filter(user -> user.getPosts() > 0)
+                .collect(Collectors.toMap(ForumUser::getUserId, user -> user));
 
+        result.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue().toString())
+                .sorted()
+                .forEach(System.out::println);
+    }
+}
         //7,2
+        /*
         System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);
+        NumbersGenerator.generateEven(20);*/
         /*
         //7.1
         PoemBeautifier beautifier1 = new PoemBeautifier();
@@ -22,8 +41,6 @@ public class StreamMain {
 
         System.out.println(Text1 + "\n" + Text2 + "\n" + Text3 + "\n" + Text4);
     }*/
-    }
-}
         /*//
         ExpressionExecutor expressionExecutor = new ExpressionExecutor();
 
