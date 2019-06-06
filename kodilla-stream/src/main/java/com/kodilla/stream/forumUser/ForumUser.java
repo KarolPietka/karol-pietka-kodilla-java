@@ -1,7 +1,6 @@
 package com.kodilla.stream.forumUser;
 
-import java.time.LocalDate;
-import java.time.Year;
+import java.time.*;
 
 public class ForumUser {
     private final int userId;
@@ -39,10 +38,8 @@ public class ForumUser {
     }
 
     public int getAge() {
-        return LocalDate.now().getYear()-getDateOfBirth().getYear();
+        return Period.between(dateOfBirth, LocalDate.now()).getYears();
     }
-
-
 
     @Override
     public String toString() {

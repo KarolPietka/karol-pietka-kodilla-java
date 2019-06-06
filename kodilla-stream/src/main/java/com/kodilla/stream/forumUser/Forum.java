@@ -15,7 +15,9 @@ public class Forum {
        forumUserList.add(new ForumUser(50, "Marta Trepka",'F',2002,12,29, 16));
        forumUserList.add(new ForumUser(60, "Dominika Stafira",'F',1969,1,1, 26));
        forumUserList.add(new ForumUser(70, "Monika Leśniewska",'F',1990,8,17, 3));
-       forumUserList.add(new ForumUser(20, "Alicja Janosz",'F',2001,6,5, 54));
+       forumUserList.add(new ForumUser(80, "Alicja Janosz",'F',2001,6,5, 54));
+       forumUserList.add(new ForumUser(90, "Michał Korczyk",'M',1965,5,17,32));
+       forumUserList.add(new ForumUser(100, "Maciej Raczek",'M',1995,9,15,15));
    }
     public List<ForumUser> getList() {
         return new ArrayList<>(forumUserList);

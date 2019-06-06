@@ -26,6 +26,7 @@ public class ArrayOperationsTestSuite {
 
         //When
         double average = ArrayOperations.getAverage(numbers);
+        System.out.println(average);
 
         //Then
         Assert.assertEquals(0, average, 0);
