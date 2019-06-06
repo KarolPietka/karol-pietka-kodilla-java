@@ -4,16 +4,16 @@ import java.util.List;
 
 public class Continent {
     private String name;
-    private final List<Country> country;
+    private final List<Country> countries;
 
-    public Continent(final String name, final List<Country>country) {
+    public Continent(final String name, final List<Country>countries) {
         this.name = name;
-        this.country = country;
+        this.countries = countries;
     }
     public String getName() {
         return name;
     }
-    public List<Country> getCountry() {
-        return country;
+    public List<Country> getCountries() {
+        return countries;
     }
 }
