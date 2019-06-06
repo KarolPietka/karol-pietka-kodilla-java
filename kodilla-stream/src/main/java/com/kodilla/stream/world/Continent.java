@@ -3,17 +3,17 @@ package com.kodilla.stream.world;
 import java.util.List;
 
 public class Continent {
-    private String continentName;
-    private final List<Country> countryList;
+    private String name;
+    private final List<Country> country;
 
-    public Continent(final String continentName, final List<Country>countryList) {
-        this.continentName = continentName;
-        this.countryList = countryList;
+    public Continent(final String name, final List<Country>country) {
+        this.name = name;
+        this.country = country;
     }
-    public String getContinentName() {
-        return continentName;
+    public String getName() {
+        return name;
     }
-    public List<Country> getCountryList() {
-        return countryList;
+    public List<Country> getCountry() {
+        return country;
     }
 }

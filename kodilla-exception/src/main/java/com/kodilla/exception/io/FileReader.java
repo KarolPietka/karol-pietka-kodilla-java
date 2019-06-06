@@ -12,11 +12,13 @@ import java.util.stream.Stream;
 public class FileReader {
 
 
-    public void readFile() throws IOException {
+    public void readFile(){ //throws IOException {
 
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("/file/names.txt").getFile());     //classLoader.getResource("/file/names.txt").getFile());
-      //  Path path = Paths.get(file.getPath());
+
+
+        File file = new File("D:\\Programowanie\\Projects\\kodilla-course\\kodilla-exception\\src\\main\\resources\\file\\names.txt");//classLoader.getResource("/file/names.txt").getFile());
+
+        //Path path = Paths.get(file.getPath());
 
         //try{
            // Stream<String> fileLines = Files.lines(path);

@@ -3,15 +3,15 @@ package com.kodilla.stream.world;
 import java.math.BigDecimal;
 
 public final class Country {
-    private final String countryName;
+    private final String name;
     private final BigDecimal peopleQuantity;
 
-    public Country(final String countryName, final BigDecimal peopleQuantity) {
-        this.countryName = countryName;
+    public Country(final String name, final BigDecimal peopleQuantity) {
+        this.name = name;
         this.peopleQuantity = peopleQuantity;
     }
     public String getName() {
-        return countryName;
+        return name;
     }
     public BigDecimal getPeopleQuantity() {
         return peopleQuantity;
