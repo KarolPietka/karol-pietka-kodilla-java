@@ -12,10 +12,9 @@ import java.util.stream.Stream;
 public class FileReader {
 
 
-    public void readFile(){
+    public void readFile() throws FileReaderException{
 
-        File file = new File("D:\\Programowanie\\Projects\\kodilla-course\\kodilla-exception\\src\\main\\resources\\file\\names.txt");//classLoader.getResource("/file/names.txt").getFile());
-
+        File file = new File("D:\\Programowanie\\Projects\\kodilla-course\\kodilla-exception\\src\\main\\resources\\file\\names.txt");
         Path path = Paths.get(file.getPath());
 
         try (Stream<String> fileLines = Files.lines(Paths.get(file.getPath()))){
@@ -24,7 +23,8 @@ public class FileReader {
 
         } catch (IOException e){
 
-            System.out.println("Oh now! Something is wrong! Error: " + e);
+            throw new FileReaderException();
+            //System.out.println("Oh now! Something is wrong! Error: " + e);
 
         } finally{
 
