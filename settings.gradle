@@ -8,4 +8,5 @@ include 'kodilla-testing'
 include 'user'
 include 'kodilla-stream'
 include 'kodilla-exception'
+include 'kodilla-good-patterns'
 
