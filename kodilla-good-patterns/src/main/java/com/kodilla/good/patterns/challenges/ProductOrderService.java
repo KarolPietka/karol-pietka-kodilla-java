@@ -1,7 +1,5 @@
 package com.kodilla.good.patterns.challenges;
 
-import java.time.LocalDate;
-
 public class ProductOrderService {
 
     private InformationService informationService;
@@ -15,16 +13,15 @@ public class ProductOrderService {
     }
 
     public OrderDto process(final Order order) {
-        boolean isOrder = productService.isOrdered(order.getUser(), order.getProduct());
+        boolean isOrder = productService.isOrdered(order.getUser(), order.getProduct(), order.getOrderQuantity());
 
         if(isOrder) {
             informationService.sendMessage(order.getUser());
-            orderService.createOrder(order.getUser(), order.getProduct());
+            orderService.createOrder(order.getUser(), order.getProduct(), order.getOrderQuantity());
             return new OrderDto(order.getUser(), true);
             } else {
             return new OrderDto(order.getUser(), false);
             }
-
     }
 }
 

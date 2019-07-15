@@ -3,10 +3,12 @@ package com.kodilla.good.patterns.challenges;
 public class Order {
     private User user;
     private Product product;
+    private int orderQuantity;
 
-    public Order(User user, Product product) {
+    public Order(User user, Product product, int orderQuantity) {
         this.user = user;
         this.product = product;
+        this.orderQuantity = orderQuantity;
     }
 
     public User getUser() {
@@ -17,4 +19,7 @@ public class Order {
         return product;
     }
 
+    public int getOrderQuantity() {
+        return orderQuantity;
+    }
 }

@@ -12,13 +12,6 @@ public class Main {
     }
 }
 
-
-
-
-
-
-
-
         /* 13.1
         MovieStore movieStores = new MovieStore();
         String result = movieStores.getMovies().values().stream()

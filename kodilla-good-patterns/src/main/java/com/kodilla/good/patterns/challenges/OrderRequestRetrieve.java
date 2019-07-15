@@ -4,8 +4,8 @@ public class OrderRequestRetrieve {
 
     public Order retrieve () {
         User user = new User("Karol", "Piętka");
-        Product product = new Product("Bike", 2000,2);
+        Product product = new Product("Bike", 2000,5);
 
-        return new Order(user, product);
+        return new Order(user, product, 3);
     }
 }
