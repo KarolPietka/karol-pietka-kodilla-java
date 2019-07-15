@@ -1,10 +1,25 @@
 package com.kodilla.good.patterns.challenges;
 
-import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
+       OrderRequestRetrieve orderRequestRetrieve = new OrderRequestRetrieve();
+       Order orderRequest = orderRequestRetrieve.retrieve();
+
+        ProductOrderService productOrderService = new ProductOrderService(new MessageService(), new ProductOrder(), new PreapreOdrer());
+        productOrderService.process(orderRequest);
+    }
+}
+
+
+
+
+
+
+
+
+        /* 13.1
         MovieStore movieStores = new MovieStore();
         String result = movieStores.getMovies().values().stream()
                 .flatMap(list -> list.stream())
@@ -13,5 +28,5 @@ public class Main {
 
         System.out.println(result);
 
-    }
-}
+    }*/
+
