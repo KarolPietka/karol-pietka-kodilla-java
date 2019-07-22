@@ -1,10 +1,10 @@
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.Food2Door;
 
-public class User {
+public class Customer {
     private String name;
     private String surname;
 
-    public User(String name, String surname) {
+    public Customer(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
@@ -19,9 +19,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+        return "Customer name: '" + name + '\'' +
+                ", customer surname ='" + surname + '\'' +
                 '}';
     }
 }
