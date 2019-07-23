@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CalculatorTestSuite {
+
     @Test
     public void testAddCalculations(){
         //Given
@@ -23,12 +24,11 @@ public class CalculatorTestSuite {
 
         //Then
         Assert.assertEquals(7.9, addResult, 0);
-        System.out.println("Addition result = " + addResult);
     }
     @Test
     public void testSubCalculations(){
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.calculator");
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
@@ -36,7 +36,6 @@ public class CalculatorTestSuite {
 
         //Then
         Assert.assertEquals(15.2, subResult, 0);
-        System.out.println("Subtraction result = " + subResult);
     }
     @Test
     public void testMulCalculations(){
@@ -45,11 +44,10 @@ public class CalculatorTestSuite {
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
-        double mulResult = calculator.mul(2.8, 5.8);
+         double mulResult = calculator.mul(2.8, 5.8);
 
         //Then
         Assert.assertEquals(16.24, mulResult, 0);
-        System.out.println("Multiplication result = " + mulResult);
     }
     @Test
     public void testDivCalculations(){
@@ -62,6 +60,5 @@ public class CalculatorTestSuite {
 
         //Then
         Assert.assertEquals(2.008, divResult, 0);
-        System.out.println("Division result = " + divResult);
     }
 }

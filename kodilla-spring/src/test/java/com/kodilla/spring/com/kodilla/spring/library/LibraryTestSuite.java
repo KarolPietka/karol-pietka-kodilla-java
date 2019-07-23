@@ -16,7 +16,7 @@ public class LibraryTestSuite {
     public void testLoadFromDb() {
         //Given
         ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring.library");
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
         Library library = context.getBean(Library.class);
         //When
         library.loadFromDb();
@@ -27,7 +27,7 @@ public class LibraryTestSuite {
     public void testSaveToDb() {
         //Given
         ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring.library");
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
         Library library = context.getBean(Library.class);
         //When
         library.saveToDb();
