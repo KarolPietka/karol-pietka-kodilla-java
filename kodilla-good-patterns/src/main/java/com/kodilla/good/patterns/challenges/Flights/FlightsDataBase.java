@@ -18,6 +18,7 @@ public class FlightsDataBase {
         flights.add(new Flight("Paryż","Moskwa","Warszawa"));
         flights.add(new Flight("Berlin","Paryż",""));
         flights.add(new Flight("Honkong","Warszawa","Oslo"));
+        flights.add(new Flight("Honkong","Berlin","Kraków"));
 
         return flights;
     }

@@ -37,9 +37,8 @@ public class FlightFinder {
     }
 
 
-    public  void result(String chooseOption, String city) {
+    public  void findAirport(String chooseOption, String city) {
         if (chooseOption.equals("From")) {
-            // System.out.println(flightFrom(city))
 
         } else if (chooseOption.equals("To")) {
             System.out.println(flightTo(city));

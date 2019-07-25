@@ -6,7 +6,7 @@ public class Application {
         FlightsDataBase flightsDataBase = new FlightsDataBase();
 
         FlightFinder flightFinder = new FlightFinder(flightsDataBase);
-        flightFinder.result("To","Berlin");
+        flightFinder.findAirport("To","Berlin");
 
     }
 }
