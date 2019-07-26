@@ -30,9 +30,6 @@ public class LibraryTestSuite {
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-        //System.out.println(library);
-        //System.out.println(clonedLibrary);
-
 
         //making a deep copy of object board
         Library deepClonedLibrary = null;
@@ -42,10 +39,6 @@ public class LibraryTestSuite {
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-        //System.out.println(library);
-        //System.out.println(library);
-        //System.out.println(deepClonedLibrary);
-
 
         // When
         library.getBooks().remove(book2);
