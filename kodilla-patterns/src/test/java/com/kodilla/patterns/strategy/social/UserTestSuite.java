@@ -1,9 +1,5 @@
-package com.kodilla.patterns.strategy;
+package com.kodilla.patterns.strategy.social;
 
-import com.kodilla.patterns.strategy.social.Millenials;
-import com.kodilla.patterns.strategy.social.User;
-import com.kodilla.patterns.strategy.social.YGeneration;
-import com.kodilla.patterns.strategy.social.ZGeneration;
 import com.kodilla.patterns.strategy.social.socialMedia.TwitterPublisher;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,12 +7,12 @@ import org.junit.Test;
 public class UserTestSuite {
     @Test
     public void defaultPublishingMethodTest() {
-        //given
+        //Given
         User millenials = new Millenials("Karol");
         User yGeneration = new YGeneration("Magda");
         User zGeneration = new ZGeneration("Emilka");
 
-        //when
+        //When
         String millenialsPosted = millenials.sharePost();
         System.out.println("Millenials use: "+millenialsPosted);
         String yGenerationPosted = yGeneration.sharePost();
@@ -24,7 +20,7 @@ public class UserTestSuite {
         String ZGenerationPosted = zGeneration.sharePost();
         System.out.println("Z generation use: " + ZGenerationPosted);
 
-        //then
+        //Then
         Assert.assertEquals("Facebook", millenialsPosted);
         Assert.assertEquals("Snapchat", yGenerationPosted);
         Assert.assertEquals("Twitter", ZGenerationPosted);
