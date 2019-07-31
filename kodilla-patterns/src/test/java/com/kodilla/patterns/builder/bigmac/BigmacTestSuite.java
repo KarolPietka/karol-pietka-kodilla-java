@@ -20,10 +20,10 @@ public class BigmacTestSuite {
 
         System.out.println(bigmac);
 
-        //when
+        //When
         int ingredientsInBigmac = bigmac.getIngredients().size();
 
-        //then
+        //Then
         Assert.assertEquals(5, ingredientsInBigmac, 0);
     }
 }

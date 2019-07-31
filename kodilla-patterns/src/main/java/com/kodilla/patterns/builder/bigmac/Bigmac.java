@@ -22,7 +22,6 @@ public final class Bigmac {
         private String sauce;
         private List<String> ingredients = new ArrayList<>();
 
-
         public BigmacBuilder bun(String bun) {
             this.bun = bun;
             return this;
@@ -74,6 +73,3 @@ public final class Bigmac {
                 '}';
     }
 }
-
-
-
