@@ -9,9 +9,9 @@ public class BigmacTestSuite {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .ingredient("mashrooms")
-                .bun("sesame")
-                .burgers(4)
-                .sauce("barbecue")
+                .bun(Bigmac.BigmacBuilder.WITH_SESAME)
+                .burgers(1)
+                .sauce(Bigmac.BigmacBuilder.BARBECUE_SAUCE)
                 .ingredient("onion")
                 .ingredient("cheese")
                 .ingredient("cucumber")

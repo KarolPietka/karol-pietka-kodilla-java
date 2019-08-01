@@ -21,19 +21,36 @@ public final class Bigmac {
         private int burgers;
         private String sauce;
         private List<String> ingredients = new ArrayList<>();
+        public static final String WITH_SESAME = "with sesame";
+        public static final String WITHOUT_SESAME = "without sesame";
+        public static final String STANDARD_SAUCE = "standard sauce";
+        public static final String BARBECUE_SAUCE= "barbecue sauce";
+        public static final String SAUCE_OF_1000_ISLANDS = "1000 islands sauce";
 
         public BigmacBuilder bun(String bun) {
-            this.bun = bun;
+            if (bun.equals(WITH_SESAME) || bun.equals(WITHOUT_SESAME)){
+                this.bun = bun;
+            }else {
+                throw new IllegalStateException("Choose bun with sesame or without sesame.");
+            }
             return this;
         }
 
         public BigmacBuilder burgers(int burgers) {
-            this.burgers = burgers;
+            if (burgers > 0){
+                this.burgers = burgers;
+            }else{
+                throw new IllegalStateException("Choose the amount of burgers.");
+            }
             return this;
         }
 
         public BigmacBuilder sauce(String sauce) {
-            this.sauce = sauce;
+            if (sauce.equals(STANDARD_SAUCE) || sauce.equals(BARBECUE_SAUCE) || sauce.equals(SAUCE_OF_1000_ISLANDS)){
+                this.sauce = sauce;
+            }else{
+                throw new IllegalStateException("Choose from available sauces: standard sauce or barbecue sauce or sauce of 1000 islands. ");
+            }
             return this;
         }
 
