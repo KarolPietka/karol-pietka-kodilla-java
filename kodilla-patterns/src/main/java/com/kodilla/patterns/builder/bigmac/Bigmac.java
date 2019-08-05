@@ -28,20 +28,16 @@ public final class Bigmac {
         public static final String SAUCE_OF_1000_ISLANDS = "1000 islands sauce";
 
         public BigmacBuilder bun(String bun) {
-            if (bun.equalsIgnoreCase(WITH_SESAME) || bun.equalsIgnoreCase(WITHOUT_SESAME)) {
+            if (bun.equalsIgnoreCase(WITH_SESAME) || bun.equalsIgnoreCase(WITHOUT_SESAME)){
                 this.bun = bun;
-            } else {
-                throw new IllegalStateException("Choose bun with sesame or without sesame.");
+            }else {
+                throw new IllegalStateException("Please choose bun. We have bun with sesame or without sesame.");
             }
             return this;
         }
 
         public BigmacBuilder burgers(int burgers) {
-            if (burgers > 0) {
-                this.burgers = burgers;
-            } else {
-                throw new IllegalStateException("Choose the amount of burgers.");
-            }
+            this.burgers = burgers;
             return this;
         }
 
@@ -50,7 +46,7 @@ public final class Bigmac {
                 this.sauce = sauce;
             } else {
                 throw new IllegalStateException("Choose from available sauces: standard sauce or barbecue sauce or sauce of 1000 islands. ");
-            }
+           }
             return this;
         }
 
@@ -60,26 +56,30 @@ public final class Bigmac {
         }
 
         public Bigmac build() {
-             // if (bun != null) {
-            return new Bigmac(bun, burgers, sauce, ingredients);
-              // } else {
-              //throw new IllegalStateException("Choose bun.");
-        }
-           /* if (burgers == 0) {
-                return "ff";
-            }else{
-                return new Bigmac(bun, burgers, sauce, ingredients);
+            if (bun != null){
+               this.bun = bun;
+            }else {
+                throw new IllegalStateException("Take bun.");
             }
-            if (sauce == null) {
-                throw new IllegalStateException("Choose from available sauces: standard sauce or barbecue sauce or sauce of 1000 islands.");
-            } else {
-                return new Bigmac(bun, burgers, sauce, ingredients);
 
-            }*/
+            if (burgers != 0){
+               this.burgers = burgers;
+            }else{
+                throw new IllegalStateException("Take meal.");
+            }
+
+            if (sauce != null) {
+                this.sauce = sauce;
+            } else {
+                throw new IllegalStateException("Choose one of available sauce.");
+            }
+
+            return new Bigmac(bun, burgers, sauce, ingredients);
+        }
+
     }
 
     public String getBun() {
-
         return bun;
     }
 
@@ -98,10 +98,10 @@ public final class Bigmac {
     @Override
     public String toString() {
         return "BigmacBuilder{" +
-                "bun='" + bun + '\'' +
-                ", burgers=" + burgers +
-                ", sauce='" + sauce + '\'' +
-                ", ingredients=" + ingredients +
+                "bun = '" + bun + '\'' +
+                ", burgers = " + burgers +
+                ", sauce = '" + sauce + '\'' +
+                ", ingredients = " + ingredients +
                 '}';
     }
 }
