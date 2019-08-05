@@ -1,50 +1,27 @@
 package com.kodilla.good.patterns.challenges.Flights;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class FlightFinder {
 
-    public final FlightsDataBase flightsDataBase;
-
-    public FlightFinder(final FlightsDataBase flightsDataBase) {
-       this.flightsDataBase = flightsDataBase;
+    public static void departure(String flightFrom, FlightDataBase flightDataBase) {
+        flightDataBase.getFlightDataBase().entrySet().stream()
+                .filter(map -> map.getValue().getFlightFrom().equals(flightFrom))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
-
-    public List<Flight> flightFrom(String city) {
-        List<Flight> flightFrom = flightsDataBase.getFlights().stream()
-                .filter(r -> r.getFlightFrom().equals(city))
-                .collect(Collectors.toList());
-
-        return flightFrom;
+    public static void arrival (String flightTo, FlightDataBase flightDataBase) {
+        flightDataBase.getFlightDataBase().entrySet().stream()
+                .filter(map -> map.getValue().getFlightTo().equals(flightTo))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
-    public List<Flight> flightTo(String city) {
-        List<Flight> flightTo = flightsDataBase.getFlights().stream()
-                .filter(r -> r.getFlightTo().equals(city))
-                .collect(Collectors.toList());
-
-        return flightTo;
-    }
-
-    public List<Flight> flightThrough(String city) {
-        List<Flight> flightThrough = flightsDataBase.getFlights().stream()
-                .filter(r -> r.getFlightThrough().equals(city))
-                .collect(Collectors.toList());
-
-        return flightThrough;
-    }
-
-
-    public  void findAirport(String chooseOption, String city) {
-        if (chooseOption.equals("From")) {
-
-        } else if (chooseOption.equals("To")) {
-            System.out.println(flightTo(city));
-        } else if (chooseOption.equals("Trough")) {
-            System.out.println(flightThrough(city));
-        }
-
+    public static void transfer (String flightThrough, FlightDataBase flightDataBase){
+        flightDataBase.getFlightDataBase().entrySet().stream()
+                .filter(m -> m.getValue().getFlightThrough().equals(flightThrough))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 }
