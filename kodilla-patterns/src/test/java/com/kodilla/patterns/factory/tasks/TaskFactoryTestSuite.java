@@ -24,7 +24,7 @@ public class TaskFactoryTestSuite {
         Task paintingTask = factory.makeTask(TasksFactory.PAINTING);
         //Then
         Assert.assertEquals("Paint wall in room",paintingTask.getTaskName());
-        Assert.assertEquals("Kitchen", paintingTask.executeTask());
+        Assert.assertEquals("Silver", paintingTask.executeTask());
         Assert.assertEquals(true,paintingTask.isTaskExecuted());
     }
 
