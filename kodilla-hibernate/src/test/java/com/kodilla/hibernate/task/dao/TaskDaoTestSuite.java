@@ -22,7 +22,7 @@ public class TaskDaoTestSuite {
     @Test
     public void testTaskDaoSave() {
         //Given
-        Task task = new Task(DESCRIPTION, 70);
+        Task task = new Task(DESCRIPTION, 7);
 
         //When
         taskDao.save(task);

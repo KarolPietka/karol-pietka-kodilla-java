@@ -13,11 +13,15 @@ public class Task {
     private Date created;
     private int duration;
 
+    public Task(){
+    }
+
     public Task(String description, int duration) {
         this.description = description;
         this.created = new Date();
         this.duration = duration;
     }
+
     @Id
     @GeneratedValue
     @NotNull
@@ -25,15 +29,18 @@ public class Task {
     public int getId() {
         return id;
     }
+
     @Column(name = "DESCREPTION")
     public String getDescription() {
         return description;
     }
+
     @NotNull
     @Column(name = "CREATED")
     public Date getCreated() {
         return created;
     }
+
     @Column(name = "DURATION")
     public int getDuration() {
         return duration;

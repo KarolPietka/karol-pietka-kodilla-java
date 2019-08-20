@@ -17,6 +17,6 @@ include 'kodilla-jdbc'
 include 'kodilla-jdbc'
 include 'kodilla-jdbc'
 include 'kodilla-jdbc'
-include 'k'
+include 'kodilla-hibernate'
 include 'kodilla-jdbc'
 
