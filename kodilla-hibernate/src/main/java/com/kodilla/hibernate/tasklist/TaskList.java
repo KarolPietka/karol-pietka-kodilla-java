@@ -1,6 +1,6 @@
 package com.kodilla.hibernate.tasklist;
 
-import javafx.concurrent.Task;
+import com.kodilla.hibernate.task.Task;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
