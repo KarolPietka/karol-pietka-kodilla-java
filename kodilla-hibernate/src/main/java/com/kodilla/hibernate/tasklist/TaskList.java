@@ -18,6 +18,9 @@ public class TaskList {
    public TaskList(){
    }
 
+   public TaskList(String listname, String toDo_tasks){
+   }
+
     public TaskList(int id, String listName, String description) {
         this.id = id;
         this.listName = listName;
