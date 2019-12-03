@@ -92,6 +92,7 @@ public class CompanyDaoTestSuite {
         //When
         List<Employee> employeesLastName = employeeDao.retrieveLastName("Clarckson");
         List<Company> companiesName = companyDao.findCompaniesByThreeFirstLetters("Dat");
+        //List<Company> companiesName2 = companyDao.findCompaniesByThreeLetters("ata");
 
 
         //Then

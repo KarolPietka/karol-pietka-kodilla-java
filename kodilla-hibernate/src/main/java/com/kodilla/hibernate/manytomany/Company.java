@@ -8,8 +8,12 @@ import java.util.List;
 @NamedNativeQuery(
         name = "Company.findCompaniesByThreeFirstLetters",
         query = "SELECT * FROM COMPANIES" +
-                " WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :TEXT",
+                " WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :ABC",
         resultClass = Company.class
+)
+@NamedQuery(
+        name = "Company.findCompaniesByThreeLetters",
+        query = "FROM Company WHERE name LIKE '%ABC%'"
 )
 
 @Entity
